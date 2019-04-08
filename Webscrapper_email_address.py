@@ -113,28 +113,4 @@ def web_scrapper():
 
 
 
-# In[5]:
-
-
-
-
-
-# In[6]:
-
-
-print(mydb) 
-
-
-# In[3]:
-
-
-mycursor = mydb.cursor()
-
-# mycursor.execute("CREATE DATABASE mydatabase")
-
-
-# In[ ]:
-
-
-
 
