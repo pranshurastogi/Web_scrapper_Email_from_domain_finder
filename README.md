@@ -16,8 +16,54 @@ NOTE - You have MySQL pre installed before running this command to check run the
 ``` import mysql.connector ```
 
 Get connected with DB
-``` mydb = mysql.connector.connect(
+``` 
+  mydb = mysql.connector.connect(
   host="localhost",
   user="yourusername",
-  passwd="yourpassword"
-) ```
+  passwd="yourpassword") 
+```
+
+Now first of all we should create a database
+
+```
+mycursor = mydb.cursor()
+mycursor.execute("CREATE DATABASE web_scraper_email_address")
+```
+
+To check DB -> You can run this command and after that you can use that command
+
+``
+mycursor.execute("SHOW DATABASES")
+for x in mycursor:
+  print(x) 
+  
+  mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername",
+  passwd="yourpassword",
+  database="web_scraper_email_address"
+)
+mycursor.execute("USE web_scraper_email_address")
+
+```
+
+Now we have to create Table to store the domain name and email
+
+```
+
+mycursor.execute("CREATE TABLE email_domain  (domain_name VARCHAR(255), email VARCHAR(255))")
+
+```
+
+
+Just a schema of DB
+
+```
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| domain_name | varchar(255) | YES  |     | NULL    |       |
+| email       | varchar(255) | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+```
+
