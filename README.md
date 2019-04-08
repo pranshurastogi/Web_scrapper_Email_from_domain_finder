@@ -32,7 +32,7 @@ mycursor.execute("CREATE DATABASE web_scraper_email_address")
 
 To check DB -> You can run this command and after that you can use that command
 
-``
+```
 mycursor.execute("SHOW DATABASES")
 for x in mycursor:
   print(x) 
@@ -57,7 +57,6 @@ mycursor.execute("CREATE TABLE email_domain  (domain_name VARCHAR(255), email VA
 
 
 Just a schema of DB
-
 ```
 +-------------+--------------+------+-----+---------+-------+
 | Field       | Type         | Null | Key | Default | Extra |
@@ -67,3 +66,6 @@ Just a schema of DB
 +-------------+--------------+------+-----+---------+-------+
 ```
 
+## How I improved the search of emails
+
+I am not directly searching for emails from that particular URL to find emails, instead I firstly scrapping all the similar URL's and then searching for emails in that.
