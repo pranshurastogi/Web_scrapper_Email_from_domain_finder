@@ -15,5 +15,9 @@ NOTE - You have MySQL pre installed before running this command to check run the
 
 ``` import mysql.connector ```
 
-
-
+Get connected with DB
+``` mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername",
+  passwd="yourpassword"
+) ```
