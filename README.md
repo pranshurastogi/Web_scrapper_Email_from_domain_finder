@@ -69,3 +69,6 @@ Just a schema of DB
 ## How I improved the search of emails
 
 I am not directly searching for emails from that particular URL to find emails, instead I firstly scrapping all the similar URL's and then searching for emails in that.
+
+
+# To know more go to wiki page of this repo.
